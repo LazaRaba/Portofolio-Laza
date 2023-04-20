@@ -1,0 +1,416 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0fr;
+    grid-template-rows: 15% 2.5fr 10%;
+    gap: 1em 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "logoContainer comptenceContainer ."
+        "content content ."
+        "socialContainer contactContainer .";
+    background: #FFAE20;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.first-block {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #121211 50%, #FFAE20 50%);
+    left: 0;
+    top: 0;
+}
+
+/* --------------CONTENT- IMAGE---------------- */
+
+.content {
+    display: grid;
+    grid-template-columns: 0.6fr 1.9fr 0.5fr;
+    grid-template-rows: 0.6fr 2fr 0.9fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". textDesign ."
+        ". image ."
+        ". text-image .";
+    grid-area: content;
+    overflow: hidden;
+    position: relative;
+}
+
+/* -----------------------IMAGE-------------------- */
+.image {
+    grid-area: image;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    overflow: hidden;
+    top: -100px;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+/* -----------------------TEXT-IMAGE-------------------- */
+
+.text-image {
+    grid-area: text-image;
+    color: white;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.text-image h1 {
+    font-size: calc(9000vw / 1024);
+    text-align: center;
+    letter-spacing: 10px;
+    margin-bottom: 0;
+}
+
+.text-image h1 span {
+    font-style: italic;
+    color: #FFAE20;
+    font-family: 'Shantea Script', sans-serif;
+    font-size: calc(11000vw / 1024);
+}
+
+
+
+
+/* -----------------------TEXT BOT-------------------- */
+
+.textBot {
+    clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+    background-color: white;
+    width: 100vw;
+    height: calc(12000vw / 1024);
+    position: absolute;
+    top: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textBot h2 {
+    font-size: calc(6500vw / 1000);
+    margin-top: 1em;
+    text-align: center;
+    color: #121211;
+}
+
+.textBot h2 span {
+    color: rgb(26, 101, 53);
+    font-family: 'Ragilac', sans-serif;
+    padding-bottom: 10px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+
+/* --------------COMPETENCE-------------- */
+.comptenceContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0fr 0fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". competence ."
+        ". . ."
+        ". . .";
+    grid-area: comptenceContainer;
+    overflow-y: hidden;
+}
+
+.competence {
+    grid-area: competence;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+    z-index: 2;
+
+}
+
+.competence a {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+
+}
+
+/* --------------CONTACT-------------- */
+
+.contactContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0fr 0fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". contact ."
+        ". . ."
+        ". . .";
+    grid-area: contactContainer;
+}
+
+.contact {
+    grid-area: contact;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+    z-index: 2;
+
+}
+
+.contact a {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+/* ----------Contact Hover-------------------- */
+.contact a:before,
+.contact a:after,
+.competence a:before,
+.competence a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color:#121211;
+    transition: 0.5s;
+}
+
+.contact a:after,
+.competence a:after{
+    left: 0;
+    bottom: -2px;
+}
+
+.contact a:before,
+.competence a:before{
+    right: 0;
+    top: -6px;
+} 
+
+.contact a:hover:after, 
+.contact a:hover:before,
+.competence a:hover:after, 
+.competence a:hover:before {
+    width: 100%;
+}
+
+
+/* --------------SOCIAL-------------- */
+
+.socialContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0fr 0fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". social ."
+        ". . ."
+        ". . .";
+    grid-area: socialContainer;
+    z-index: 2;
+}
+
+.social {
+    grid-area: social;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.social a {
+    color: white;
+    margin-left: 1em;
+    font-size: clamp(1.2em, 5vw, 1.5em);
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    position: relative;
+}
+
+
+/* --------------Social hover-------------- */
+
+.social a:before,
+.social a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color:#FFAE20;
+    transition: 0.5s;
+}
+
+
+.social a:after{
+    left: 0;
+    bottom: -2px;
+}
+
+
+.social a:before{
+    right: 0;
+    top: -6px;
+} 
+
+
+.social a:hover:after, 
+.social a:hover:before {
+    width: 100%;
+}
+
+.social a:hover {
+    color: #FFAE20;
+} 
+
+/* --------------LOGO-------------- */
+
+.logoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0fr 0fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". logo ."
+        ". . ."
+        ". . .";
+    grid-area: logoContainer;
+    overflow: hidden;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: calc(5em + 5vw);
+    height: calc(3em + 3vw);
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+}
+
+/* -------------MOUSE trail------------------ */
+
+.trail {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgb(245, 248, 245);
+    overflow: hidden;
+}
+
+/* -----------Preloader--------------- */
+
+#custom-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFAE20;
+    z-index: 3;
+    overflow: hidden;
+}
+
+#loader-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    max-width: 95vw;
+    height: 4px;
+    background-color: #121211;
+    transition: width 0.1s ease-in-out;
+}
+
+
+#loader-percentage {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: calc(4000vw / 1024);
+    color: #121211;
+}
+
+#loader-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(2000vw / 1024);
+    color: #121211;
+    transition: transform 0.6s ease-in-out;
+}
+
+#loader-text h1 span {
+    font-style: italic;
+}
+
+#loader-text h1 {
+    letter-spacing: 3px;
+}
+
+
+
+/* ----------MediA query--------- */
+
+@media (max-width: 768px) {
+
+    .trail {
+        display: none;
+    }
+
+    .content {
+        grid-template-columns: 1fr 40fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr;
+    }
+}
+
+@media (max-width: 571px) {
+
+    .text-image h1{
+        margin-top: 40px;
+    }
+
+    .text-image h1 span:last-child {
+        color: #121211;
+    }
+
+
+.textBot
+{
+    margin-top: 1.6em;
+}
+
+}

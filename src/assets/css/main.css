@@ -1,0 +1,158 @@
+/*------------------*
+# Body
+*-------------------*/
+@import url('https://fonts.cdnfonts.com/css/gilroy-medium');
+@import url('https://fonts.cdnfonts.com/css/holland-2');
+@import url('https://fonts.cdnfonts.com/css/shantea-script');
+@import url('https://fonts.cdnfonts.com/css/ragilac');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    overflow-x: hidden;
+    width: 100vw;
+    font-family: 'Gilroy-medium', 'Maison Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar,
+body::-webkit-scrollbar,
+html::-webkit-scrollbar{
+    background-color:#acaca4;
+    height: 20px;
+    width: 15px;
+}
+
+*::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb{
+    background-color:rgb(26, 101, 53);
+    border-radius: 99em;
+    border: 1px solid white; 
+}
+
+
+/*------------------*
+# Headings
+*-------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin-top: 0;
+    font-style: normal;
+    text-transform: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a{
+    color: inherit;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.b{
+    border: 3px solid rgb(37, 8, 221);
+}
+
+.r{
+    border: 3px solid rgb(221, 8, 8);
+}
+
+
+/*------------------*
+# Button
+*-------------------*/
+
+.btn, button{
+
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    appearance: auto;
+    margin: 5px;
+}
+
+.btn.btn-medium, button.btn-medium{
+    font-size: medium;
+}
+
+.btn.btn-large, button.btn-large{
+    font-size: large;
+}
+
+.btn.btn-small, button.btn-small{
+    font-size: small;
+}
+
+
+
+
+
+/*------------------*
+# cont
+*-------------------*/
+.cont,
+.cont-fluid,
+.cont-xxl,
+.cont-xl,
+.cont-lg,
+.cont-md,
+.cont-sm{
+    width: 100vw;
+    padding-right:0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px){
+    .cont-sm, .cont {
+        max-width: 540px;
+    }
+} 
+
+@media (min-width: 768px){
+    .cont-md, .cont-sm, .cont {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px){
+    .cont-lg, .cont-md, .cont-sm, .cont {
+        max-width: 960px;
+    }
+} 
+
+@media (min-width: 1200px){
+    .cont-xl, .cont-lg, .cont-md, .cont-sm, .cont {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px){
+    .cont-xxl, .cont-xl, .cont-lg, .cont-md, .cont-sm, .cont {
+        max-width: 1320px;
+    }
+}
